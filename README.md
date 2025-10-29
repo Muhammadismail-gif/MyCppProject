@@ -13,4 +13,4 @@ This repository contains a simple C++ program that I am working on to improve my
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/Muhammadismail-gif/my-Cpp-Project.git
+   git clone https://github.com/Muhammadismail-gif/mMyCppProject.git
