@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
     
-    // ===== 1. STRING BUILT-IN FUNCTIONS =====
+    //  1. STRING BUILT-IN FUNCTIONS
     string name;
     cout << "Enter your name: ";
     getline(cin, name);
@@ -14,7 +14,7 @@ int main() {
     cout << "Length of your name: " << name.length() << endl;
     cout << "First character: " << name.at(0) << endl;
 
-    // ===== 2. MATH BUILT-IN FUNCTIONS =====
+    // 2. MATH BUILT-IN FUNCTIONS 
     double num;
     cout << "\nEnter a number: ";
     cin >> num;
@@ -24,7 +24,7 @@ int main() {
     cout << "Ceil value: " << ceil(num) << endl;
     cout << "Floor value: " << floor(num) << endl;
 
-    // ===== 3. ARRAY + ALGORITHM FUNCTIONS =====
+    //  3. ARRAY + ALGORITHM FUNCTIONS 
     int arr[5];
     cout << "\nEnter 5 numbers:\n";
     for(int i = 0; i < 5; i++) {
@@ -56,7 +56,7 @@ int main() {
         cout << "It is a digit." << endl;
     }
 
-    // ===== 5. TYPE CONVERSION FUNCTIONS =====
+    // 5. TYPE CONVERSION FUNCTIONS
     int number = 100;
     double converted = static_cast<double>(number);
 
