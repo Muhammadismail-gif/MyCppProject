@@ -2,9 +2,7 @@
 #include <cmath>  // For built-in functions
 using namespace std;
 
-// ============================================================
 // 1. FUNCTION DECLARATION / PROTOTYPE
-// ============================================================
 // A function prototype declares the function's interface before it's defined
 // It tells the compiler: return type, function name, and parameters
 
@@ -14,11 +12,9 @@ double calculateArea(double radius);  // Prototype for area function
 void printMessage(string msg);   // Prototype for void function (no return)
 bool isPositive(int num);        // Prototype returning bool
 
-// ============================================================
 // 2. USER DEFINED FUNCTIONS - Complete Examples
-// ============================================================
 
-// ------------------- EXAMPLE 1: Function with Return Value -------------------
+//  EXAMPLE 1: Function with Return Value
 // RETURN TYPE: int
 // FUNCTION NAME: add
 // PARAMETERS: (int a, int b) - two integer parameters
@@ -29,7 +25,7 @@ int add(int a, int b) {          // FUNCTION HEADER starts here
     return sum;                  // RETURN KEYWORD: sends value back to caller
 }                                // FUNCTION BODY ends here
 
-// ------------------- EXAMPLE 2: Function with double return -------------------
+//  EXAMPLE 2: Function with double return 
 // Shows different return types and parameter types
 
 double calculateArea(double radius) {
@@ -38,7 +34,7 @@ double calculateArea(double radius) {
     return area;                 // Returns a double value
 }
 
-// ------------------- EXAMPLE 3: Void Function (No Return Value) -------------------
+// EXAMPLE 3: Void Function (No Return Value) 
 // VOID return type means function doesn't return anything
 
 void printMessage(string msg) {  // FUNCTION HEADER
@@ -47,7 +43,7 @@ void printMessage(string msg) {  // FUNCTION HEADER
     // No return statement needed (but can use 'return;' to exit early)
 }
 
-// ------------------- EXAMPLE 4: Function with Multiple Parameters -------------------
+// EXAMPLE 4: Function with Multiple Parameters 
 // Demonstrates various parameter types and default values
 
 double calculatePower(double base, int exponent = 2) {
@@ -59,7 +55,7 @@ double calculatePower(double base, int exponent = 2) {
     return result;
 }
 
-// ------------------- EXAMPLE 5: Function returning bool -------------------
+// EXAMPLE 5: Function returning bool 
 bool isPositive(int num) {
     if (num > 0) {
         return true;             // Returns boolean value
@@ -69,7 +65,7 @@ bool isPositive(int num) {
     // Alternative single line: return (num > 0);
 }
 
-// ------------------- EXAMPLE 6: Function with Reference Parameters -------------------
+//  EXAMPLE 6: Function with Reference Parameters 
 // Modifies original variable (pass by reference)
 
 void swapValues(int &x, int &y) {  // & indicates reference (alias to original)
@@ -79,7 +75,7 @@ void swapValues(int &x, int &y) {  // & indicates reference (alias to original)
     // No return needed - changes are made directly to original variables
 }
 
-// ------------------- EXAMPLE 7: Function with Multiple Return Paths -------------------
+//  EXAMPLE 7: Function with Multiple Return Paths
 int findMax(int a, int b, int c) {
     if (a >= b && a >= c) {
         return a;                // First return path
@@ -90,9 +86,7 @@ int findMax(int a, int b, int c) {
     }
 }
 
-// ============================================================
 // 3. BUILT-IN vs USER DEFINED FUNCTIONS DEMONSTRATION
-// ============================================================
 
 void demonstrateBuiltInVsUserDefined() {
     cout << "\n=== BUILT-IN vs USER DEFINED FUNCTIONS ===" << endl;
@@ -112,9 +106,7 @@ void demonstrateBuiltInVsUserDefined() {
     cout << "User-defined calculateArea(5): " << calculateArea(5) << endl;
 }
 
-// ============================================================
 // 4. RETURNING VALUES FROM FUNCTIONS - Various Examples
-// ============================================================
 
 // Returning basic types
 char getGrade(int score) {
@@ -144,18 +136,15 @@ string getDayName(int dayNum) {
     return "Invalid day";        // Return string
 }
 
-// ============================================================
 // MAIN FUNCTION - Where program execution begins
-// ============================================================
 
 int main() {
-    cout << "========================================" << endl;
+    cout << "==============" << endl;
     cout << "   C++ FUNCTIONS - COMPLETE GUIDE" << endl;
-    cout << "========================================" << endl;
+    cout << "==============" << endl;
 
-    // --------------------------------------------------------
     // CALLING FUNCTIONS (Function Invocation)
-    // --------------------------------------------------------
+  
     cout << "\n=== CALLING FUNCTIONS ===" << endl;
     
     // Call 1: Simple function call with literals
@@ -196,14 +185,10 @@ int main() {
     // Call 9: Multiple return paths function
     cout << "Max of (10, 25, 15): " << findMax(10, 25, 15) << endl;
     
-    // --------------------------------------------------------
     // BUILT-IN vs USER DEFINED DEMONSTRATION
-    // --------------------------------------------------------
     demonstrateBuiltInVsUserDefined();
     
-    // --------------------------------------------------------
     // RETURNING VALUES DEMONSTRATION
-    // --------------------------------------------------------
     cout << "\n=== RETURNING VALUES FROM FUNCTIONS ===" << endl;
     
     // Return char
@@ -216,9 +201,7 @@ int main() {
     checkEligibility(16);
     checkEligibility(21);
     
-    // --------------------------------------------------------
     // PARTS OF FUNCTION DEFINITION SUMMARY
-    // --------------------------------------------------------
     cout << "\n=== PARTS OF FUNCTION DEFINITION ===" << endl;
     cout << "1. FUNCTION HEADER: int add(int a, int b)" << endl;
     cout << "   - Return type: int" << endl;
