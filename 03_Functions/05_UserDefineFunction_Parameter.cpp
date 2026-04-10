@@ -3,68 +3,56 @@ using namespace std;
 
 
 // 1. FORMAL vs ACTUAL PARAMETERS
-// ============================================
 
 // Formal parameters: a and b (declared in function definition)
 void add(int a, int b) {
     cout << "Sum = " << (a + b) << endl;
 }
 
-// ============================================
+
 // 2. DEFAULT PARAMETER
-// ============================================
 
 void greet(string name, string msg = "Hello") {
     cout << msg << " " << name << endl;
 }
 
-// ============================================
 // 3. MULTIPLE PARAMETERS
-// ============================================
+
 
 void showInfo(string name, int age, float marks) {
     cout << "Name: " << name << ", Age: " << age << ", Marks: " << marks << endl;
 }
 
-// ============================================
+
 // 4. CONST PARAMETER
-// ============================================
 
 void printNumber(const int num) {
     // num = 10;  // ERROR: cannot modify const
     cout << "Number: " << num << endl;
 }
 
-// ============================================
 // 5. PASS BY VALUE
-// ============================================
 
 void changeValue(int x) {
     x = 100;  // Changes only the copy
     cout << "Inside function: x = " << x << endl;
 }
 
-// ============================================
 // 6. PASS BY REFERENCE
-// ============================================
 
 void changeReference(int &x) {
     x = 100;  // Changes original
     cout << "Inside function: x = " << x << endl;
 }
 
-// ============================================
 // 7. PASS BY POINTER
-// ============================================
 
 void changePointer(int *x) {
     *x = 100;  // Changes original through pointer
     cout << "Inside function: *x = " << *x << endl;
 }
 
-// ============================================
 // 8. PASS ARRAY
-// ============================================
 
 void printArray(int arr[], int size) {
     cout << "Array: ";
@@ -74,9 +62,7 @@ void printArray(int arr[], int size) {
     cout << endl;
 }
 
-// ============================================
 // MAIN FUNCTION
-// ============================================
 
 int main() {
     cout << "=== C++ FUNCTION PARAMETERS ===" << endl << endl;
