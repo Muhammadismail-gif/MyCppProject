@@ -1,18 +1,18 @@
 #include <iostream>
 using namespace std;
 
-// ============================================
+ 
 // GLOBAL VARIABLES (accessible everywhere)
-// ============================================
+ 
 int globalVar = 100;  // Global variable
 
 void showGlobal() {
     cout << "Global inside function: " << globalVar << endl;
 }
 
-// ============================================
+ 
 // 1. FUNCTION OVERLOADING
-// ============================================
+ 
 
 // Same function name, different parameters
 int add(int a, int b) {
@@ -27,9 +27,9 @@ int add(int a, int b, int c) {    // Different number of parameters
     return a + b + c;
 }
 
-// ============================================
+ 
 // 2. OPERATOR OVERLOADING
-// ============================================
+ 
 
 class Complex {
 public:
@@ -53,9 +53,9 @@ public:
     }
 };
 
-// ============================================
+ 
 // 3. RECURSION
-// ============================================
+ 
 
 int factorial(int n) {
     if (n <= 1)           // Base case
@@ -64,9 +64,9 @@ int factorial(int n) {
         return n * factorial(n - 1);  // Recursive call
 }
 
-// ============================================
+ 
 // MAIN FUNCTION
-// ============================================
+ 
 
 // main() CANNOT be overloaded in C++ - only one main allowed
 int main() {
