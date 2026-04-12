@@ -1,10 +1,8 @@
 #include <iostream>
 using namespace std;
 
-// ============================================
+ 
 // 1. CREATE/DEFINE A STRUCTURE
-// ============================================
-
 // Basic structure definition
 struct Student {
     string name;
@@ -12,9 +10,9 @@ struct Student {
     float marks;
 };
 
-// ============================================
+ 
 // 2. NAMED STRUCTURE (TAG)
-// ============================================
+ 
 
 // Using typedef for cleaner syntax
 typedef struct {
@@ -23,10 +21,9 @@ typedef struct {
     double price;
 } Car;  // 'Car' is now the type name
 
-// ============================================
+ 
 // 3. C++ UNION
-// ============================================
-
+ 
 // Union shares same memory for all members
 union Data {
     int i;
@@ -34,9 +31,9 @@ union Data {
     char str[20];
 };
 
-// ============================================
+ 
 // 4. C++ ENUMERATION
-// ============================================
+ 
 
 // Basic enum declaration
 enum Color {
@@ -59,10 +56,8 @@ enum class Direction {
     EAST,
     WEST
 };
-
-// ============================================
+ 
 // MAIN FUNCTION
-// ============================================
 
 int main() {
     cout << "=== C++ STRUCTURES ===" << endl << endl;
