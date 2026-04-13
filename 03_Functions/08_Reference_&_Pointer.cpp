@@ -2,11 +2,10 @@
 using namespace std;
 
 int main() {
-    cout << "=== C++ REFERENCE & POINTERS ===" << endl << endl;
+    cout << "C++ REFERENCE & POINTERS" << endl << endl;
 
-    // ============================================
     // 1. C++ REFERENCE
-    // ============================================
+ 
     cout << "1. C++ REFERENCE" << endl;
     
     int num = 10;
@@ -20,9 +19,9 @@ int main() {
     cout << "num = " << num << endl;  // num is also 20!
     cout << endl;
 
-    // ============================================
+ 
     // 2. MEMORY ADDRESS
-    // ============================================
+ 
     cout << "2. MEMORY ADDRESS" << endl;
     
     int var = 100;
@@ -32,9 +31,9 @@ int main() {
     cout << "Reference ref address: " << &ref << endl;
     cout << "(Same as num address!)" << endl << endl;
 
-    // ============================================
+ 
     // 3. C++ POINTERS
-    // ============================================
+ 
     cout << "3. C++ POINTERS" << endl;
     
     // Pointer declaration
@@ -46,9 +45,9 @@ int main() {
     cout << "ptr stores: " << ptr << endl;    // Same address
     cout << endl;
 
-    // ============================================
+ 
     // 4. DEREFERENCE (USING POINTER VALUES)
-    // ============================================
+ 
     cout << "4. DEREFERENCE (*)" << endl;
     
     cout << "ptr (address): " << ptr << endl;
@@ -59,9 +58,9 @@ int main() {
     cout << "var = " << var << endl;  // var changed!
     cout << endl;
 
-    // ============================================
+ 
     // 5. USING POINTERS IN C++
-    // ============================================
+ 
     cout << "5. USING POINTERS" << endl;
     
     int a = 5, b = 10;
@@ -75,9 +74,9 @@ int main() {
     cout << "After swap: a=" << a << ", b=" << b << endl;
     cout << endl;
 
-    // ============================================
+ 
     // 6. REFERENCE vs POINTER COMPARISON
-    // ============================================
+ 
     cout << "6. REFERENCE vs POINTER" << endl;
     
     int x = 50;
