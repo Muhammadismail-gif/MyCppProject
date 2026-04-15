@@ -1,89 +1,81 @@
 #include <iostream>
-#include <vector>
+#include <string>
 using namespace std;
 
-// Forward declaration
-class Department;
-
-class Employee {
+// COMPLETE CLASS DEMONSTRATION
+class Student {
+// 1. ACCESS SPECIFIERS
+private:    // Information hiding
+    int id;
+    float gpa;
+    
+protected:  // Inheritance access
+    string major;
+    
+public:     // Public interface
     string name;
-    Department* dept;  // Association: Employee knows Department
+    static int totalStudents;  // Class variable
     
-public:
-    Employee(string n) : name(n), dept(nullptr) {}
+    // 2. CONSTRUCTOR
+    Student(string n, int i, float g, string m) 
+        : name(n), id(i), gpa(g), major(m) {
+        totalStudents++;
+        cout << "Object created: " << name << " (Total: " << totalStudents << ")\n";
+    }
     
-    void assignTo(Department* d);  // Will define after Department
+    // 3. DESTRUCTOR
+    ~Student() {
+        totalStudents--;
+        cout << "Object destroyed: " << name << " (Remaining: " << totalStudents << ")\n";
+    }
     
-    void show() {
-        cout << "Employee: " << name;
-        if (dept) cout << " in Department";
-        cout << "\n";
+    // 4. MEMBER FUNCTIONS
+    void study(int hours) {  // Modifier
+        gpa += hours * 0.01;
+        if (gpa > 4.0) gpa = 4.0;
+    }
+    
+    float getGPA() const {   // Accessor (const)
+        return gpa;
+    }
+    
+    void display() const {   // Const method
+        cout << "[" << this << "] " << id << ": " << name 
+             << " (" << major << ") GPA: " << gpa << "\n";
+    }
+    
+    // 5. STATIC METHOD
+    static void showCount() {
+        cout << "Total students: " << totalStudents << "\n";
     }
 };
 
-class Department {
-    string name;
-    vector<Employee*> employees;  // Aggregation: Department has Employees
-    
-public:
-    Department(string n) : name(n) {}
-    
-    void addEmployee(Employee* emp) {
-        employees.push_back(emp);
-    }
-    
-    void showEmployees() {
-        cout << "Department " << name << " has " 
-             << employees.size() << " employees\n";
-    }
-};
-
-void Employee::assignTo(Department* d) {
-    dept = d;
-    d->addEmployee(this);
-}
-
-// Composition: Car HAS-A Engine (strong ownership)
-class Engine {
-    int horsepower;
-public:
-    Engine(int hp) : horsepower(hp) {}
-    void start() { cout << "Engine (" << horsepower << " HP) started\n"; }
-};
-
-class Car {
-    Engine engine;  // Composition: Engine is part of Car
-    string model;
-    
-public:
-    Car(string m, int hp) : model(m), engine(hp) {}
-    
-    void start() {
-        cout << "Starting " << model << "...\n";
-        engine.start();
-    }
-};
+// Initialize static member
+int Student::totalStudents = 0;
 
 int main() {
-    cout << "=== Object Relationships ===\n\n";
+    cout << "╔═══════════════════════════════════════╗\n";
+    cout << "║     C++ OBJECT & CLASS COMPLETE       ║\n";
+    cout << "╚═══════════════════════════════════════╝\n\n";
     
-    // Association & Aggregation
-    cout << "--- Association & Aggregation ---\n";
-    Employee e1("Alice"), e2("Bob");
-    Department sales("Sales");
+    // Creating objects
+    Student s1("Alice", 1001, 3.5, "Computer Science");
+    Student s2("Bob", 1002, 3.2, "Mathematics");
     
-    e1.assignTo(&sales);
-    e2.assignTo(&sales);
+    cout << "\n--- Object States ---\n";
+    s1.display();
+    s2.display();
     
-    e1.show();
-    e2.show();
-    sales.showEmployees();
+    cout << "\n--- Message Passing (Method Calls) ---\n";
+    s1.study(10);  // Sending message to object s1
+    s2.study(5);   // Sending message to object s2
     
-    // Composition
-    cout << "\n--- Composition ---\n";
-    Car myCar("Tesla Model 3", 450);
-    myCar.start();
-    // Engine destroyed when Car is destroyed
+    cout << s1.name << "'s new GPA: " << s1.getGPA() << "\n";
+    cout << s2.name << "'s new GPA: " << s2.getGPA() << "\n";
     
-    return 0;
+    cout << "\n--- Static Member Access ---\n";
+    Student::showCount();
+    
+    cout << "\n--- Objects Going Out of Scope ---\n";
+    return 0;  // Destructors called automatically
 }
