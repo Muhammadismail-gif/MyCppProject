@@ -19,3 +19,13 @@ i.e. d1 (current object, this) and d2 (as a reference)
  d3.inch =inch + d2.inch;
  return d3; // Return the resulting object
  } }
+
+ int main() {
+ Distance d1(8, 9); //using the parameterized constructor
+ Distance d2(10, 2); //using the parameterized constructor
+ Distance d3; //using the default constructor
+ // call or use overloaded “+” operator function
+ d3 = d1 + d2;
+ cout << "Total Feet & Inches: " << d3.feet << " ‘ " << d3.inch;
+ return 0;
+}
